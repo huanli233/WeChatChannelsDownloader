@@ -146,9 +146,9 @@ public:
 		}
 		bzero(pRep, iLen);
 
-		if ((pC_Begin = strIstr(pData, pBegin)) > 0) {
+		if ((pC_Begin = strIstr(pData, pBegin)) != nullptr) {
 
-			if ((pC_End = strIstr(pC_Begin, pEnd)) > 0) {
+			if ((pC_End = strIstr(pC_Begin, pEnd)) != nullptr) {
 
 				memcpy(pRep, pC_Begin, pC_End - pC_Begin);
 				strRet = pRep;
