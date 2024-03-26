@@ -242,7 +242,7 @@ int Arithmetic::HexToAscii(const char* data, int i_in_len, char* code)
     for (int i = 0; i < i_in_len; i+=2){
         q[0] = p[i];
         q[1] = p[i + 1];
-	    code[len++] = (char)strtoul(q, '\0', 16);
+	    code[len++] = (char)strtoul(q, NULL, 16);
     }
     return len;
 }
